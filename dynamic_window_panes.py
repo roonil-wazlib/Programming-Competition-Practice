@@ -1,12 +1,8 @@
 from functools import lru_cache
 
+import sys
+sys.setrecursionlimit(1000000)
 
-
-#basic format of test data
-WIDTH = 3
-HEIGHT = 4
-COST = 5
-panes = [(3,3,10), (1,2,3), (1,3,4)]
 
 
 
@@ -94,4 +90,3 @@ def main():
             
             
 main()
-#print(get_max_profit(WIDTH, HEIGHT, COST, panes))
