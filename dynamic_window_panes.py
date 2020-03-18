@@ -1,12 +1,13 @@
 from functools import lru_cache
 
 
+
 #basic format of test data
 WIDTH = 3
 HEIGHT = 4
 COST = 5
-
 panes = [(3,3,10), (1,2,3), (1,3,4)]
+
 
 
 def get_max_profit(width, height, cost, pane_info):
@@ -65,6 +66,7 @@ def one_fits(width, height, panes):
             only_one_fits.append(pane)
             
     return True, max(only_one_fits, key=lambda x : x[2])
+
 
 
 def pane_fits(width, height, pane):
