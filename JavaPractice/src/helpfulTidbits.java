@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.function.UnaryOperator;
 
 public class helpfulTidbits {
@@ -43,6 +44,12 @@ public class helpfulTidbits {
     public static void listComp2(List<Integer> ls) {
         //for custom replace all
         ls.replaceAll(new MyOperator());
+    }
+
+    public static void readingInContent(List<Integer> ls) {
+        Scanner in = new Scanner(System.in);
+        int value = in.nextInt(); //if we know it will be an int
+        String otherValue = in.nextLine(); //For strings
     }
 }
 
