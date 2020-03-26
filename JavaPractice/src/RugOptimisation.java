@@ -14,7 +14,7 @@ public class RugOptimisation {
         for (int i = 0; i < size; i++){
             room.add(in.nextLine());
         }
-        Map<Integer, Integer> numWays = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> numWays = new HashMap<>();
 
         for (int i = 0; i < size - rug + 1; i++){
             for (int j = 0; j < size - rug + 1; j++){
