@@ -1,6 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class helpfulTidbits {
@@ -15,10 +15,24 @@ public class helpfulTidbits {
         var list2 = new ArrayList<>(List.of(1, 2)); //a mutable list
         list2.add(3);
 
+        Map<Integer, Integer> cache = new ConcurrentHashMap<>();
+
+
         //listComp(list1);
         //System.out.println(list1); //can't do this because list is immutable
         listComp2(list2);
         System.out.println(list2);
+
+    }
+
+    private static long uncached(long n) {
+        long result = n;
+        long m = n - 1;
+        while (m > 1) {
+            result = result * m;
+            m -= 1;
+        }
+        return result;
     }
 
 
@@ -51,6 +65,7 @@ public class helpfulTidbits {
         int value = in.nextInt(); //if we know it will be an int
         String otherValue = in.nextLine(); //For strings
     }
+
 }
 
 class MyOperator implements UnaryOperator<Integer>
@@ -60,3 +75,6 @@ class MyOperator implements UnaryOperator<Integer>
         return x + 1;
     }
 }
+
+
+
